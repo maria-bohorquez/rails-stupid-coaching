@@ -1,0 +1,12 @@
+<h1>Stupid coach</h1>
+<p> you said "<%= params[:userstatement] %>"</p>
+
+<p>here's your answer : <%= if params[:userstatement].include? '?'
+    'Silly question, get dressed and go to work!'
+    elsif params[:userstatement].include? 'I am going to work right now!'
+      'nice to know 🏆'
+    else
+      "I don't care, get dressed and go to work!"
+    end%> </p>
+
+<%= link_to "another question ?", ask_path  %>
